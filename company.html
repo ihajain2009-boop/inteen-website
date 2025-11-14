@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Internship Opportunities - InTeen</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>InTeen</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="company.html" class="nav-link active">List Internships</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>List Internship Opportunities</h1>
+            <p>Connect with talented students and provide valuable learning experiences</p>
+        </div>
+
+        <div class="form-container">
+            <form id="companyForm">
+                <!-- Company Socials Section -->
+                <div class="form-section">
+                    <h2 class="section-title">Company Socials</h2>
+                    <div class="social-inputs">
+                        <div class="form-group social-input">
+                            <i>🌐</i>
+                            <input type="text" id="website" placeholder="Company Website">
+                        </div>
+                        <div class="form-group social-input">
+                            <i>📘</i>
+                            <input type="text" id="linkedin" placeholder="LinkedIn Profile">
+                        </div>
+                        <div class="form-group social-input">
+                            <i>📷</i>
+                            <input type="text" id="instagram" placeholder="Instagram Handle">
+                        </div>
+                        <div class="form-group social-input">
+                            <i>🐦</i>
+                            <input type="text" id="twitter" placeholder="Twitter Handle">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Introduction -->
+                <div class="form-section">
+                    <h2 class="section-title">Company Introduction</h2>
+                    <div class="form-group">
+                        <label for="companyName">Company Name *</label>
+                        <input type="text" id="companyName" placeholder="Enter your company name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="companyDescription">Company Description *</label>
+                        <textarea id="companyDescription" placeholder="Tell us about your company, mission, and values..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="industry">Industry *</label>
+                        <select id="industry" required>
+                            <option value="">Select your industry</option>
+                            <option value="technology">Technology</option>
+                            <option value="finance">Finance</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="education">Education</option>
+                            <option value="retail">Retail</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="media">Media & Entertainment</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Internship Details -->
+                <div class="form-section">
+                    <h2 class="section-title">Internship Details</h2>
+                    <div class="form-group">
+                        <label for="internshipCount">Number of Internships *</label>
+                        <select id="internshipCount" required>
+                            <option value="">Select number of internships</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Categories Selection -->
+                <div class="form-section">
+                    <h2 class="section-title">Select Categories *</h2>
+                    <div class="categories-selector">
+                        <div class="search-box">
+                            <div class="search-icon">🔍</div>
+                            <input type="text" id="categorySearch" placeholder="Search categories...">
+                        </div>
+                        <div class="categories-list" id="categoriesList">
+                            <!-- Categories will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internship Specifications -->
+                <div class="form-section">
+                    <h2 class="section-title">Internship Specifications</h2>
+                    <div class="internship-specs">
+                        <div class="spec-card">
+                            <h4>Internship Duration</h4>
+                            <div class="form-group">
+                                <select id="duration">
+                                    <option value="">Select duration</option>
+                                    <option value="1month">1 Month</option>
+                                    <option value="2months">2 Months</option>
+                                    <option value="3months">3 Months</option>
+                                    <option value="6months">6 Months</option>
+                                    <option value="1year">1 Year</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Work Hours Per Week</label>
+                                <input type="number" id="hoursPerWeek" min="5" max="40" placeholder="e.g., 20">
+                            </div>
+                        </div>
+
+                        <div class="spec-card">
+                            <h4>Internship Type</h4>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="remote" value="remote">
+                                    <label for="remote">Remote</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="hybrid" value="hybrid">
+                                    <label for="hybrid">Hybrid</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="onsite" value="onsite">
+                                    <label for="onsite">On-site</label>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-top: 15px;">
+                                <label for="stipend">Stipend (per month)</label>
+                                <div class="stipend-input">
+                                    <input type="text" id="stipend" placeholder="e.g., 5000 or Unpaid">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="spec-card">
+                            <h4>Student Requirements</h4>
+                            <div class="form-group">
+                                <label for="educationLevel">Student Grade/Year</label>
+                                <select id="educationLevel">
+                                    <option value="">Select grade/year</option>
+                                    <option value="9th">9th Grade</option>
+                                    <option value="10th">10th Grade</option>
+                                    <option value="11th">11th Grade</option>
+                                    <option value="12th">12th Grade</option>
+                                    <option value="1st-year">1st Year College</option>
+                                    <option value="2nd-year">2nd Year College</option>
+                                    <option value="any">Any</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="skills">Required Skills</label>
+                                <input type="text" id="skills" placeholder="e.g., Python, Marketing, Design">
+                            </div>
+                        </div>
+
+                        <div class="spec-card">
+                            <h4>Application Process</h4>
+                            <div class="form-group">
+                                <label for="deadline">Application Deadline</label>
+                                <input type="date" id="deadline">
+                            </div>
+                            <div class="form-group">
+                                <label for="startDate">Internship Start Date</label>
+                                <input type="date" id="startDate">
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="immediateStart" value="immediate">
+                                <label for="immediateStart">Immediate Start Available</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Publish Internship Opportunities</button>
+                
+                <div class="success-message" id="successMessage">
+                    <h3>Application Submitted Successfully!</h3>
+                    <p>Your internship listing has been submitted. We'll review your submission and contact you within 2 business days.</p>
+                </div>
+                
+                <p class="form-note">We'll review your submission and contact you within 2 business days</p>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 InTeen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Company registration page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const categories = [
+                "Software Analysis", "Digital Marketing", "Stock Management", "Search Engine Optimization",
+                "Data Analysis", "Blogging", "Social Media Handling", "Web Development", "Mobile Development",
+                "Cloud Computing", "Cybersecurity", "AI & Machine Learning", "Database Management",
+                "Business Strategy", "Project Management", "Financial Analysis", "Supply Chain",
+                "Entrepreneurship", "Human Resources", "Operations", "Content Marketing", "Email Marketing",
+                "Brand Management", "Market Research", "Advertising", "UI/UX Design", "Graphic Design",
+                "Product Design", "Motion Graphics", "Web Design", "3D Modeling", "Illustration",
+                "Academic Research", "Data Research", "Scientific Research", "User Research",
+                "E-commerce", "Retail Management", "Sales", "Customer Service", "Merchandising"
+            ];
+
+            const categoriesList = document.getElementById('categoriesList');
+            const categorySearch = document.getElementById('categorySearch');
+            const companyForm = document.getElementById('companyForm');
+            const successMessage = document.getElementById('successMessage');
+
+            // Populate categories list
+            function displayCategories(categoriesToShow = categories) {
+                categoriesList.innerHTML = '';
+                categoriesToShow.forEach(category => {
+                    const categoryOption = document.createElement('div');
+                    categoryOption.className = 'category-option';
+                    categoryOption.innerHTML = `
+                        <input type="checkbox" id="cat-${category.replace(/\s+/g, '-').toLowerCase()}" value="${category}">
+                        <label for="cat-${category.replace(/\s+/g, '-').toLowerCase()}">${category}</label>
+                    `;
+                    categoriesList.appendChild(categoryOption);
+                    
+                    // Add selection functionality
+                    const checkbox = categoryOption.querySelector('input');
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            categoryOption.classList.add('selected');
+                        } else {
+                            categoryOption.classList.remove('selected');
+                        }
+                    });
+                });
+            }
+
+            // Search functionality
+            categorySearch.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const filteredCategories = categories.filter(category => 
+                    category.toLowerCase().includes(searchTerm)
+                );
+                displayCategories(filteredCategories);
+            });
+
+            // Form submission
+            companyForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get selected categories
+                const selectedCategories = [];
+                document.querySelectorAll('.category-option input:checked').forEach(checkbox => {
+                    selectedCategories.push(checkbox.value);
+                });
+                
+                // Basic validation
+                if (selectedCategories.length === 0) {
+                    alert('Please select at least one category for internships');
+                    return;
+                }
+                
+                // Show success message
+                successMessage.style.display = 'block';
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth' });
+                
+                // In a real application, you would send this data to a server
+                // Reset form after 5 seconds
+                setTimeout(() => {
+                    companyForm.reset();
+                    displayCategories();
+                    successMessage.style.display = 'none';
+                }, 5000);
+            });
+
+            // Initialize
+            displayCategories();
+        });
+    </script>
+</body>
+</html>
